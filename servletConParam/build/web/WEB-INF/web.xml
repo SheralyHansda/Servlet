@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	 version="4.0">
+        
+        <servlet>
+            <servlet-name>servletConParam</servlet-name>
+            <servlet-class>servletpack.servletConParam</servlet-class>
+        </servlet>
+        <servlet>
+            <servlet-name>reference</servlet-name>
+            <servlet-class>servletpack.reference</servlet-class>
+        </servlet>
+    <servlet-mapping>
+        <servlet-name>servletConParam</servlet-name>
+        <url-pattern>/servletConParam</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reference</servlet-name>
+        <url-pattern>/reference</url-pattern>
+    </servlet-mapping>
+    <context-param>
+            <param-name>app-developer</param-name>
+            <param-value>Calvin Klein</param-value>    
+        </context-param>
+        <context-param>
+            <param-name>launch-date</param-name>
+            <param-value>23-Jan-2023</param-value>
+        </context-param>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>servletConParam</welcome-file>
+    </welcome-file-list>
+</web-app>
+
